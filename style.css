@@ -1,4 +1,50 @@
-/* Variables de colores */
+.comentarios-form {
+  max-width: 400px; /* Define un ancho máximo más pequeño */
+  margin: 20px auto; /* Centra la caja */
+  padding: 15px;
+  background-color: #f8f9fa; /* Fondo claro para distinguir */
+  border: 1px solid #ddd; /* Borde sutil */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+.comentarios-form label {
+  display: block;
+  font-size: 14px; /* Texto más pequeño */
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.comentarios-form input[type="text"],
+.comentarios-form input[type="email"],
+.comentarios-form textarea {
+  width: 100%; /* Asegura que ocupen todo el ancho disponible */
+  font-size: 14px; /* Texto más pequeño */
+  padding: 8px; /* Reduce el espacio interno */
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none; /* Deshabilita redimensionar la caja de texto */
+}
+
+.comentarios-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px; /* Reduce el tamaño del botón */
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.comentarios-form button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
 :root {
     --rojo: #c62828;
     --verde: #2e7d32;
@@ -9,7 +55,7 @@
     --gris-suave: #555;
 }
 
-/* General */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -17,10 +63,10 @@ body {
     color: var(--gris);
     background-color: var(--gris-claro);
     scroll-behavior: smooth;
-    overflow-x: hidden; /* Para evitar desbordes horizontales */
+    overflow-x: hidden; 
 }
 
-/* Hero Header con paralaje y fondo animado */
+
 header.hero {
     position: relative;
     background: url('img/fondo.png') no-repeat center center/cover; /* Imagen de fondo */
@@ -35,7 +81,7 @@ header.hero {
     animation: parallax 20s infinite linear;
 }
 
-/* Animación de fondo */
+
 @keyframes parallax {
     0% { background-position: 0 0; }
     100% { background-position: 100% 0; }
@@ -98,8 +144,8 @@ header.hero {
 }
 
 .navbar a:hover {
-    background-color: #ffd700; /* Amarillo */
-    color: #333;
+    background-color: #5dc477; /* Amarillo */
+    color: #ffffff;
     transform: scale(1.1);
 }
 
@@ -178,7 +224,6 @@ header.hero {
     transform: translateY(-5px);
 }
 
-/* Animación para los enlaces */
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
@@ -208,7 +253,7 @@ header.hero {
   }
   
   .wheel {
-    background: radial-gradient(100% 100% at center,hsla(0,0%,60%,0) 47.8%,hsl(0,0%,60%) 48%);
+    background: radial-gradient(100% 100% at center,hsla(0, 100%, 43%, 0) 47.8%,hsl(0, 100%, 48%) 48%);
     z-index: 2;
   }
   
@@ -225,7 +270,7 @@ header.hero {
   
   .hamster__head {
     animation: hamsterHead var(--dur) ease-in-out infinite;
-    background: hsl(30,90%,55%);
+    background: hsl(30, 69%, 54%);
     border-radius: 70% 30% 0 100% / 40% 25% 25% 60%;
     box-shadow: 0 -0.25em 0 hsl(30,90%,80%) inset,
           0.75em -1.55em 0 hsl(30,90%,90%) inset;
@@ -342,7 +387,7 @@ header.hero {
   .spoke {
     animation: spoke var(--dur) linear infinite;
     background: radial-gradient(100% 100% at center,hsl(0,0%,60%) 4.8%,hsla(0,0%,60%,0) 5%),
-          linear-gradient(hsla(0,0%,55%,0) 46.9%,hsl(0,0%,65%) 47% 52.9%,hsla(0,0%,65%,0) 53%) 50% 50% / 99% 99% no-repeat;
+          linear-gradient(hsla(0, 2%, 8%, 0) 46.9%,hsl(0,0%,65%) 47% 52.9%,hsla(0,0%,65%,0) 53%) 50% 50% / 99% 99% no-repeat;
   }
   
   /* Animations */
@@ -541,4 +586,36 @@ header.hero {
     background: #e4405f;
     color: #fff;
   }
-  
+/* Estilos generales para las secciones */
+.seccion {
+  padding: 10px; /* Reduce el espacio interno */
+  margin: 10px auto; /* Reduce el margen entre secciones */
+  width: 80%; /* Reduce el ancho de las secciones */
+  font-size: 0.9em; /* Ajusta el tamaño del texto */
+  background-color: #f9f9f9; /* Fondo claro para destacar */
+  border: 1px solid #ddd; /* Borde ligero */
+  border-radius: 5px; /* Esquinas redondeadas */
+}
+
+/* Encabezados más pequeños para Misión y Visión */
+#vision h2, #mision h2 {
+  font-size: 1.2em; /* Reduce el tamaño del título */
+  text-align: center;
+  color: #333; /* Color oscuro para mejor visibilidad */
+}
+
+/* Ajustes de texto */
+#vision p, #mision p {
+  font-size: 0.85em; /* Reduce el tamaño del texto en párrafos */
+  line-height: 1.4; /* Espaciado entre líneas */
+  text-align: justify; /* Texto justificado */
+  color: #555; /* Color del texto más suave */
+}
+
+  #comentarios h2 {
+  font-size: 18px; /* Tamaño de fuente más pequeño */
+  text-align: left; /* Alineación a la izquierda */
+  color: #333; /* Color del texto */
+  margin-bottom: 10px; /* Espaciado inferior */
+  margin-left: 20px; /* Espaciado a la izquierda */
+}
